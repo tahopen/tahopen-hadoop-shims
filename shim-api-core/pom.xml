@@ -3,13 +3,13 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <modelVersion>4.0.0</modelVersion>
   <parent>
-    <groupId>org.pentaho</groupId>
-    <artifactId>pentaho-hadoop-shims</artifactId>
-    <version>10.1.0.0-SNAPSHOT</version>
+    <groupId>org.tahopen</groupId>
+    <artifactId>tahopen-hadoop-shims</artifactId>
+    <version>0.1.0.0-SNAPSHOT</version>
   </parent>
 
   <artifactId>shim-api-core</artifactId>
-  <version>10.1.0.0-SNAPSHOT</version>
+  <version>0.1.0.0-SNAPSHOT</version>
   <packaging>jar</packaging>
 
   <dependencies>

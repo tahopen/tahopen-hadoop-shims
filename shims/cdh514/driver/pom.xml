@@ -3,18 +3,18 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <parent>
-    <groupId>org.pentaho.hadoop.shims</groupId>
-    <artifactId>pentaho-hadoop-shims-cdh514-reactor</artifactId>
-    <version>10.1.0.0-SNAPSHOT</version>
+    <groupId>org.tahopen.hadoop.shims</groupId>
+    <artifactId>tahopen-hadoop-shims-cdh514-reactor</artifactId>
+    <version>0.1.0.0-SNAPSHOT</version>
   </parent>
 
-  <artifactId>pentaho-hadoop-shims-cdh514-driver</artifactId>
-  <version>10.1.0.0-SNAPSHOT</version>
+  <artifactId>tahopen-hadoop-shims-cdh514-driver</artifactId>
+  <version>0.1.0.0-SNAPSHOT</version>
   <packaging>bundle</packaging>
 
   <properties>
     <commons-lang.version>2.6</commons-lang.version>
-    <pentaho-osgi-bundles.version>10.1.0.0-SNAPSHOT</pentaho-osgi-bundles.version>
+    <pentaho-osgi-bundles.version>0.1.0.0-SNAPSHOT</pentaho-osgi-bundles.version>
     <org.apache.avro.version>1.8.0</org.apache.avro.version>
     <org.apache.orc.version>1.2.3</org.apache.orc.version>
     <org.apache.hadoop.version>2.6.0-cdh5.14.0</org.apache.hadoop.version>
@@ -34,13 +34,13 @@
 
   <dependencies>
     <dependency>
-      <groupId>org.pentaho</groupId>
+      <groupId>org.tahopen</groupId>
       <artifactId>shim-api</artifactId>
       <version>${project.version}</version>
     </dependency>
     <dependency>
-      <groupId>org.pentaho.hadoop.shims</groupId>
-      <artifactId>pentaho-hadoop-shims-common-fragment-V1</artifactId>
+      <groupId>org.tahopen.hadoop.shims</groupId>
+      <artifactId>tahopen-hadoop-shims-common-fragment-V1</artifactId>
       <version>${project.version}</version>
     </dependency>
     <dependency>
@@ -169,7 +169,7 @@
   <build>
     <plugins>
       <plugin>
-        <groupId>org.pentaho</groupId>
+        <groupId>org.tahopen</groupId>
         <artifactId>shim-bundle-plugin</artifactId>
         <version>${shim-bundle-plugin.version}</version>
         <configuration>

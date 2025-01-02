@@ -3,13 +3,13 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <parent>
-    <groupId>org.pentaho</groupId>
-    <artifactId>pentaho-hadoop-shims</artifactId>
-    <version>10.1.0.0-SNAPSHOT</version>
+    <groupId>org.tahopen</groupId>
+    <artifactId>tahopen-hadoop-shims</artifactId>
+    <version>0.1.0.0-SNAPSHOT</version>
   </parent>
 
-  <artifactId>pentaho-hadoop-shims-common-services-api</artifactId>
-  <version>10.1.0.0-SNAPSHOT</version>
+  <artifactId>tahopen-hadoop-shims-common-services-api</artifactId>
+  <version>0.1.0.0-SNAPSHOT</version>
   <packaging>bundle</packaging>
 
   <dependencies>
@@ -19,20 +19,20 @@
       <scope>provided</scope>
     </dependency>
     <dependency>
-      <groupId>org.pentaho</groupId>
+      <groupId>org.tahopen</groupId>
       <artifactId>shim-api-core</artifactId>
       <version>${project.version}</version>
       <scope>provided</scope>
     </dependency>
     <dependency>
-      <groupId>org.pentaho</groupId>
+      <groupId>org.tahopen</groupId>
       <artifactId>shim-api</artifactId>
       <version>${project.version}</version>
       <scope>provided</scope>
     </dependency>
     <dependency>
-      <groupId>org.pentaho.di.plugins</groupId>
-      <artifactId>pentaho-metastore-locator-api</artifactId>
+      <groupId>org.tahopen.di.plugins</groupId>
+      <artifactId>tahopen-metastore-locator-api</artifactId>
       <version>${pdi.version}</version>
       <scope>provided</scope>
     </dependency>
@@ -48,12 +48,18 @@
       <version>${org.mockito.version}</version>
       <scope>test</scope>
     </dependency>
+    <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-api</artifactId>
+      <version>2.0.0</version> 
+    </dependency>
+    
   </dependencies>
 
   <build>
     <plugins>
       <plugin>
-        <groupId>org.pentaho</groupId>
+        <groupId>org.tahopen</groupId>
         <artifactId>shim-bundle-plugin</artifactId>
         <version>${shim-bundle-plugin.version}</version>
         <configuration>

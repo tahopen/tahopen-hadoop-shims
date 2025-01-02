@@ -3,14 +3,14 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <parent>
-    <groupId>org.pentaho</groupId>
-    <artifactId>pentaho-hadoop-shims</artifactId>
-    <version>10.1.0.0-SNAPSHOT</version>
+    <groupId>org.tahopen</groupId>
+    <artifactId>tahopen-hadoop-shims</artifactId>
+    <version>0.1.0.0-SNAPSHOT</version>
   </parent>
 
-  <groupId>org.pentaho.hadoop.shims</groupId>
-  <artifactId>pentaho-hadoop-shims-common-dependencies-V1</artifactId>
-  <version>10.1.0.0-SNAPSHOT</version>
+  <groupId>org.tahopen.hadoop.shims</groupId>
+  <artifactId>tahopen-hadoop-shims-common-dependencies-V1</artifactId>
+  <version>0.1.0.0-SNAPSHOT</version>
   <packaging>bundle</packaging>
 
   <properties>
@@ -20,8 +20,8 @@
   <dependencies>
 
     <dependency>
-      <groupId>org.pentaho</groupId>
-      <artifactId>pentaho-hadoop-shims-common-mapreduce</artifactId>
+      <groupId>org.tahopen</groupId>
+      <artifactId>tahopen-hadoop-shims-common-mapreduce</artifactId>
       <version>${project.version}</version>
     </dependency>
     <dependency>
@@ -40,8 +40,8 @@
       <version>${org.apache.hadoop.version}</version>
     </dependency>
     <dependency>
-      <groupId>pentaho</groupId>
-      <artifactId>pentaho-hdfs-vfs</artifactId>
+      <groupId>org.tahopen</groupId>
+      <artifactId>tahopen-hdfs-vfs</artifactId>
     </dependency>
 
     <dependency>
@@ -84,7 +84,7 @@
       <version>${org.apache.oozie.version}</version>
     </dependency>
     <dependency>
-      <groupId>org.pentaho</groupId>
+      <groupId>org.tahopen</groupId>
       <artifactId>shim-api</artifactId>
       <version>${project.version}</version>
     </dependency>
@@ -138,7 +138,7 @@
     <plugins>
 
       <plugin>
-        <groupId>org.pentaho</groupId>
+        <groupId>org.tahopen</groupId>
         <artifactId>shim-bundle-plugin</artifactId>
         <version>${shim-bundle-plugin.version}</version>
         <configuration>

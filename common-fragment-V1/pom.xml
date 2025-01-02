@@ -3,14 +3,14 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <parent>
-    <groupId>org.pentaho</groupId>
-    <artifactId>pentaho-hadoop-shims</artifactId>
-    <version>10.1.0.0-SNAPSHOT</version>
+    <groupId>org.tahopen</groupId>
+    <artifactId>tahopen-hadoop-shims</artifactId>
+    <version>0.1.0.0-SNAPSHOT</version>
   </parent>
 
-  <groupId>org.pentaho.hadoop.shims</groupId>
-  <artifactId>pentaho-hadoop-shims-common-fragment-V1</artifactId>
-  <version>10.1.0.0-SNAPSHOT</version>
+  <groupId>org.tahopen.hadoop.shims</groupId>
+  <artifactId>tahopen-hadoop-shims-common-fragment-V1</artifactId>
+  <version>0.1.0.0-SNAPSHOT</version>
   <packaging>bundle</packaging>
 
   <properties>
@@ -45,8 +45,8 @@
           <artifactId>org.apache.karaf.jaas.config</artifactId>
         </dependency>
         <dependency>
-          <groupId>pentaho</groupId>
-          <artifactId>pentaho-big-data-impl-shim-common</artifactId>
+          <groupId>org.tahopen</groupId>
+          <artifactId>tahopen-big-data-impl-shim-common</artifactId>
           <version>${big-data-plugin.version}</version>
           <scope>compile</scope>
         </dependency>
@@ -159,26 +159,26 @@
       <scope>provided</scope>
     </dependency>
     <dependency>
-      <groupId>org.pentaho</groupId>
+      <groupId>org.tahopen</groupId>
       <artifactId>shim-api-core</artifactId>
       <version>${project.version}</version>
       <scope>provided</scope>
     </dependency>
     <dependency>
-      <groupId>org.pentaho</groupId>
+      <groupId>org.tahopen</groupId>
       <artifactId>shim-api</artifactId>
       <version>${project.version}</version>
       <scope>provided</scope>
     </dependency>
     <dependency>
-      <groupId>org.pentaho.di.plugins</groupId>
-      <artifactId>pentaho-metastore-locator-api</artifactId>
+      <groupId>org.tahopen.di.plugins</groupId>
+      <artifactId>tahopen-metastore-locator-api</artifactId>
       <version>${pdi.version}</version>
       <scope>compile</scope>
     </dependency>
     <dependency>
-      <groupId>pentaho</groupId>
-      <artifactId>pentaho-platform-api</artifactId>
+      <groupId>org.tahopen</groupId>
+      <artifactId>tahopen-platform-api</artifactId>
       <version>${platform.version}</version>
       <exclusions>
         <exclusion>
@@ -188,14 +188,14 @@
       </exclusions>
     </dependency>
     <dependency>
-      <groupId>org.pentaho</groupId>
-      <artifactId>pentaho-hadoop-shims-common-mapreduce</artifactId>
+      <groupId>org.tahopen</groupId>
+      <artifactId>tahopen-hadoop-shims-common-mapreduce</artifactId>
       <version>${project.version}</version>
       <scope>test</scope>
     </dependency>
     <dependency>
-      <groupId>org.pentaho</groupId>
-      <artifactId>pentaho-hadoop-shims-common-services-api</artifactId>
+      <groupId>org.tahopen</groupId>
+      <artifactId>tahopen-hadoop-shims-common-services-api</artifactId>
       <version>${project.version}</version>
     </dependency>
     <dependency>
@@ -216,7 +216,7 @@
       <version>${gateway-shell.version}</version>
     </dependency>
     <dependency>
-      <groupId>pentaho-kettle</groupId>
+      <groupId>tahopen-kettle</groupId>
       <artifactId>kettle-core</artifactId>
       <version>${pdi.version}</version>
       <classifier>tests</classifier>
@@ -241,7 +241,7 @@
         </executions>
       </plugin>
       <plugin>
-        <groupId>org.pentaho</groupId>
+        <groupId>org.tahopen</groupId>
         <artifactId>shim-bundle-plugin</artifactId>
         <version>${shim-bundle-plugin.version}</version>
         <configuration>

@@ -3,14 +3,14 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 <modelVersion>4.0.0</modelVersion>
 <parent>
-  <groupId>org.pentaho</groupId>
-  <artifactId>pentaho-hadoop-shims</artifactId>
-  <version>10.1.0.0-SNAPSHOT</version>
+  <groupId>org.tahopen</groupId>
+  <artifactId>tahopen-hadoop-shims</artifactId>
+  <version>0.1.0.0-SNAPSHOT</version>
 </parent>
 
-<groupId>org.pentaho.hadoop.shims</groupId>
-<artifactId>pentaho-hadoop-shims-list</artifactId>
-<version>10.1.0.0-SNAPSHOT</version>
+<groupId>org.tahopen.hadoop.shims</groupId>
+<artifactId>tahopen-hadoop-shims-list</artifactId>
+<version>0.1.0.0-SNAPSHOT</version>
 <packaging>pom</packaging>
 
 <properties>

@@ -3,12 +3,12 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <parent>
-    <groupId>org.pentaho.hadoop.shims</groupId>
-    <artifactId>pentaho-hadoop-shims-dataproc1421-reactor</artifactId>
-    <version>10.1.0.0-SNAPSHOT</version>
+    <groupId>org.tahopen.hadoop.shims</groupId>
+    <artifactId>tahopen-hadoop-shims-dataproc1421-reactor</artifactId>
+    <version>0.1.0.0-SNAPSHOT</version>
   </parent>
 
-  <artifactId>pentaho-hadoop-shims-dataproc1421-driver</artifactId>
+  <artifactId>tahopen-hadoop-shims-dataproc1421-driver</artifactId>
   <packaging>bundle</packaging>
 
   <dependencies>
@@ -29,8 +29,8 @@
       </exclusions>
     </dependency>
     <dependency>
-      <groupId>org.pentaho.hadoop.shims</groupId>
-      <artifactId>pentaho-hadoop-shims-common-fragment-V1</artifactId>
+      <groupId>org.tahopen.hadoop.shims</groupId>
+      <artifactId>tahopen-hadoop-shims-common-fragment-V1</artifactId>
       <version>${project.version}</version>
     </dependency>
     <dependency>
@@ -420,7 +420,7 @@
     <plugins>
 
       <plugin>
-        <groupId>org.pentaho</groupId>
+        <groupId>org.tahopen</groupId>
         <artifactId>shim-bundle-plugin</artifactId>
         <version>${shim-bundle-plugin.version}</version>
         <configuration>
