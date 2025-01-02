@@ -30,13 +30,13 @@
       <properties>
         <org.apache.avro.version>1.8.0</org.apache.avro.version>
         <org.apache.hbase.version>1.4.8</org.apache.hbase.version>
-        <org.apache.hadoop.version-hdp26>2.7.3.2.6.0.3-8</org.apache.hadoop.version-hdp26>
-        <org.apache.hive.version>1.2.1000.2.6.0.3-8</org.apache.hive.version>
-        <org.apache.oozie.version>4.2.0.2.6.0.3-8</org.apache.oozie.version>
+        <org.apache.hadoop.version-hdp26>2.7.3</org.apache.hadoop.version-hdp26>
+        <org.apache.hive.version>1.2.1</org.apache.hive.version>
+        <org.apache.oozie.version>4.2.0</org.apache.oozie.version>
         <parquet.version>1.8.1</parquet.version>
         <parquet.cloudera.version>1.5.0-cdh5.14.0</parquet.cloudera.version>
-        <pig.version>0.16.0.2.6.0.3-8</pig.version>
-        <sqoop.version>1.4.6.2.6.0.3-8</sqoop.version>
+        <pig.version>0.16.0</pig.version>
+        <sqoop.version>1.4.7</sqoop.version>
         <dependency.pig.classifier>h2</dependency.pig.classifier>
       </properties>
       <dependencies>
@@ -240,6 +240,7 @@
           </execution>
         </executions>
       </plugin>
+<!--      
       <plugin>
         <groupId>org.tahopen</groupId>
         <artifactId>shim-bundle-plugin</artifactId>
@@ -257,6 +258,7 @@
           </execution>
         </executions>
       </plugin>
+-->      
       <plugin>
         <groupId>org.apache.felix</groupId>
         <artifactId>maven-bundle-plugin</artifactId>
