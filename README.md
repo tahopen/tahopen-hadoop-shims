@@ -4,13 +4,13 @@ Hadoop Configurations, also known and shims and the Pentaho Big Data Adaptive la
 How to build
 --------------
 
-pentaho-hadoop-shims uses the maven framework. 
+tahopen-hadoop-shims uses the maven framework. 
 
 
 #### Pre-requisites for building the project:
 * Maven, version 3+
 * Java JDK 11
-* This [settings.xml](https://raw.githubusercontent.com/pentaho/maven-parent-poms/master/maven-support-files/settings.xml) in your <user-home>/.m2 directory
+* This [settings.xml](https://raw.githubusercontent.com/tahopen/maven-parent-poms/master/maven-support-files/settings.xml) in your <user-home>/.m2 directory
 
 #### Building it
 
