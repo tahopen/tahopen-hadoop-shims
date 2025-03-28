@@ -126,6 +126,8 @@ public class PentahoOrcRecordReader implements IPentahoInputFormat.IPentahoRecor
       if ( !fs.exists( filePath ) ) {
         throw new NoSuchFileException( fileName );
       }
+      // error depends hdp26 version not in repo!!!
+      /*
       if ( fs.getFileStatus( filePath ).isDirectory() ) {
         PathFilter pathFilter = file -> file.getName().endsWith( ".orc" );
 
@@ -135,6 +137,7 @@ public class PentahoOrcRecordReader implements IPentahoInputFormat.IPentahoRecor
         }
         filePath = fileStatuses[ 0 ].getPath();
       }
+      */
       return OrcFile.createReader( filePath,
         OrcFile.readerOptions( conf ).filesystem( fs ) );
     } catch ( IOException e ) {

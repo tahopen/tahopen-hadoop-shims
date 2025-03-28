@@ -245,7 +245,8 @@ public class ShimConfigsLoader {
     if ( namedCluster != null ) {
       InputStream is = namedCluster.getSiteFileInputStream( fileName );
       if ( is != null ) {
-        c.addResource( is, fileName );
+    	    // error depends hdp26 version not in repo!!!    	  
+        //c.addResource( is, fileName );
         return c.getValByRegex( ".*" );
       }
     }

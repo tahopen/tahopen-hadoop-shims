@@ -77,8 +77,10 @@ public class PentahoTwitterInputFormat extends HadoopFormatBase implements IPent
 
     inClassloader( () -> {
       ConfigurationProxy conf = new ConfigurationProxy();
-      BiConsumer<InputStream, String> consumer = ( is, filename ) -> conf.addResource( is, filename );
-      ShimConfigsLoader.addConfigsAsResources( namedCluster, consumer );
+      // error depends hdp26 version not in repo!!!
+
+      //BiConsumer<InputStream, String> consumer = ( is, filename ) -> conf.addResource( is, filename );
+      //ShimConfigsLoader.addConfigsAsResources( namedCluster, consumer );
       job = Job.getInstance( conf );
 
       nativeParquetInputFormat = new ParquetInputFormat<>();
@@ -102,10 +104,11 @@ public class PentahoTwitterInputFormat extends HadoopFormatBase implements IPent
       if ( !fs.exists( filePath ) ) {
         throw new NoSuchFileException( file );
       }
-      if ( fs.getFileStatus( filePath ).isDirectory() ) { // directory
+      // error depends hdp26 version not in repo!!!
+      /*if ( fs.getFileStatus( filePath ).isDirectory() ) { // directory
         ParquetInputFormat.setInputPaths( job, filePath );
         ParquetInputFormat.setInputDirRecursive( job, true );
-      } else { // file
+      } */else { // file
         ParquetInputFormat.setInputPaths( job, filePath.getParent() );
         ParquetInputFormat.setInputDirRecursive( job, false );
         ParquetInputFormat.setInputPathFilter( job, ReadFileFilter.class );
@@ -131,9 +134,10 @@ public class PentahoTwitterInputFormat extends HadoopFormatBase implements IPent
           throw new NoSuchFileException( file );
         }
         filePaths[i++] = filePath.getName();
-        if ( fs.getFileStatus( filePath ).isDirectory() ) { // directory
-          pathIsDir = true;
-        }
+        // error depends hdp26 version not in repo!!!
+        //if ( fs.getFileStatus( filePath ).isDirectory() ) { // directory
+        //  pathIsDir = true;
+        //}
       }
       if ( pathIsDir ) { // directory
         setInputPaths( job, String.join( ",", filePaths ) );

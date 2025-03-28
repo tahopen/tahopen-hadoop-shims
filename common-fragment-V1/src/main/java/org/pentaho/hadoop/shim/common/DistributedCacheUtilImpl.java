@@ -153,9 +153,11 @@ public class DistributedCacheUtilImpl implements org.pentaho.hadoop.shim.api.int
     Path lock = getLockFileAt( root );
     // These directories must exist
     for ( Path dir : directories ) {
-      if ( !( fs.exists( dir ) && fs.getFileStatus( dir ).isDirectory() ) ) {
-        return false;
-      }
+        // error depends hdp26 version not in repo!!!
+
+     // if ( !( fs.exists( dir ) && fs.getFileStatus( dir ).isDirectory() ) ) {
+     //   return false;
+     // }
     }
     // There's no lock file
     return !fs.exists( lock );

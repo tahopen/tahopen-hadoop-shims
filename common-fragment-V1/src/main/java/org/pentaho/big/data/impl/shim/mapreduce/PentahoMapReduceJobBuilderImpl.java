@@ -564,7 +564,10 @@ public class PentahoMapReduceJobBuilderImpl extends MapReduceJobBuilderImpl impl
       }
     }
     JobConf jobConf = conf.getAsDelegateConf( JobConf.class );
-    jobConf.getCredentials().addAll( UserGroupInformation.getCurrentUser().getCredentials() );
+    
+    // error depends hdp26 version not in repo!!!
+    //jobConf.getCredentials().addAll( UserGroupInformation.getCurrentUser().getCredentials() );
+    
     return super.submit( conf, shimIdentifier );
   }
 

@@ -136,8 +136,9 @@ public class CommonHBaseConnection implements HBaseConnection, IHBaseClientFacto
       boolean namedClusterIsMapr = Boolean.parseBoolean( connProps.getProperty( SHIM_IS_MAPR, "false" ) );
 
       m_config = new Configuration();
-      BiConsumer<InputStream, String> consumer = ( is, filename ) -> m_config.addResource( is, filename );
-
+      // error depends hdp26 version not in repo!!!
+      //BiConsumer<InputStream, String> consumer = ( is, filename ) -> m_config.addResource( is, filename );
+/*
       try {
         if ( namedClusterIsMapr ) {
           ShimConfigsLoader.addConfigsAsResources( namedCluster, consumer,
@@ -168,7 +169,7 @@ public class CommonHBaseConnection implements HBaseConnection, IHBaseClientFacto
         throw new IllegalArgumentException(
           BaseMessages.getString( PKG, "CommonHBaseConnection.Error.MalformedConfigURL" ) );
       }
-
+*/
       if ( !HBaseConnection.isEmpty( zookeeperQuorum ) && !HBaseConnection
         .isEmpty( m_config.get( ZOOKEEPER_QUORUM_KEY ) ) ) {
 

@@ -77,9 +77,10 @@ public class ConfigurationProxyV2 implements Configuration {
           "hive-site.xml" } );
       for ( NamedClusterSiteFile namedClusterSiteFile : nc.getSiteFiles() ) {
         if ( siteFileNames.contains( namedClusterSiteFile.getSiteFileName() ) ) {
-          job.getConfiguration()
-            .addResource( new ByteArrayInputStream( namedClusterSiteFile.getSiteFileContents().getBytes() ),
-              namedClusterSiteFile.getSiteFileName() );
+            // error depends hdp26 version not in repo!!!
+          //job.getConfiguration()
+            //.addResource( new ByteArrayInputStream( namedClusterSiteFile.getSiteFileContents().getBytes() ),
+            //  namedClusterSiteFile.getSiteFileName() );
         }
       }
       ShimConfigsLoader.setSystemProperties( nc.getName() );

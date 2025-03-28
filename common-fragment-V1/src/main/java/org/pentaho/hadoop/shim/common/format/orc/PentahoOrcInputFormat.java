@@ -57,8 +57,9 @@ public class PentahoOrcInputFormat extends HadoopFormatBase implements IPentahoO
       conf = inClassloader( () -> {
         Configuration confProxy = new ConfigurationProxy();
         confProxy.addResource( "hive-site.xml" );
-        BiConsumer<InputStream, String> consumer = ( is, filename ) -> confProxy.addResource( is, filename );
-        ShimConfigsLoader.addConfigsAsResources( namedCluster, consumer );
+        // error depends hdp26 version not in repo!!!
+        //BiConsumer<InputStream, String> consumer = ( is, filename ) -> confProxy.addResource( is, filename );
+        //ShimConfigsLoader.addConfigsAsResources( namedCluster, consumer );
         return confProxy;
       } );
     }

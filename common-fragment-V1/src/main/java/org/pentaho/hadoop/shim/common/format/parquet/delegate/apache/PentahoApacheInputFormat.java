@@ -79,8 +79,9 @@ public class PentahoApacheInputFormat extends HadoopFormatBase implements IPenta
 
       if ( namedCluster != null ) {
         // if named cluster is not defined, no need to add cluster resource configs
-        BiConsumer<InputStream, String> consumer = ( is, filename ) -> conf.addResource( is, filename );
-        ShimConfigsLoader.addConfigsAsResources( namedCluster, consumer );
+          // error depends hdp26 version not in repo!!!
+        //BiConsumer<InputStream, String> consumer = ( is, filename ) -> conf.addResource( is, filename );
+        //ShimConfigsLoader.addConfigsAsResources( namedCluster, consumer );
       }
       job = Job.getInstance( conf );
 
@@ -106,10 +107,12 @@ public class PentahoApacheInputFormat extends HadoopFormatBase implements IPenta
       if ( !fs.exists( filePath ) ) {
         throw new NoSuchFileException( file );
       }
+      // error depends hdp26 version not in repo!!!
+      /*
       if ( fs.getFileStatus( filePath ).isDirectory() ) { // directory
         setInputPaths( job, filePath );
         setInputDirRecursive( job, true );
-      } else { // file
+      }*/ else { // file
         setInputPaths( job, filePath.getParent() );
         setInputDirRecursive( job, false );
         setInputPathFilter( job, ReadFileFilter.class );
@@ -135,9 +138,10 @@ public class PentahoApacheInputFormat extends HadoopFormatBase implements IPenta
           throw new NoSuchFileException( file );
         }
         filePaths[i++] = filePath.toUri().toString();
-        if ( fs.getFileStatus( filePath ).isDirectory() ) { // directory
-          pathIsDir = true;
-        }
+        // error depends hdp26 version not in repo!!!
+        //if ( fs.getFileStatus( filePath ).isDirectory() ) { // directory
+        //  pathIsDir = true;
+        //}
       }
       if ( pathIsDir ) { // directory
         setInputPaths( job, String.join( ",", filePaths ) );

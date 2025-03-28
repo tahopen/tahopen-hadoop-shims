@@ -29,22 +29,22 @@
     <pentaho-osgi-bundles.version>0.1.0.0-SNAPSHOT</pentaho-osgi-bundles.version>
     <big-data-plugin.version>0.1.0.0-SNAPSHOT</big-data-plugin.version>
     <org.apache.orc.version>1.2.3</org.apache.orc.version>
-    <org.apache.parquet.version>1.8.1</org.apache.parquet.version>
+    <org.apache.parquet.version>1.14.1</org.apache.parquet.version>
     <twitter.parquet.version>1.5.0-cdh5.13.0</twitter.parquet.version>
     <jets3t.version>0.9.4</jets3t.version>
     <!-- Added for fragment prototype -->
-    <org.apache.hadoop.version>2.7.3.2.6.0.3-8</org.apache.hadoop.version>
+    <org.apache.hadoop.version>2.6.0-cdh5.13.0</org.apache.hadoop.version>
     <org.apache.avro.version>1.8.0</org.apache.avro.version>
-    <parquet.version>1.8.1</parquet.version>
-    <sqoop.version>1.4.6.2.6.0.3-8</sqoop.version>
-    <pig.version>0.16.0.2.6.0.3-8</pig.version>
+    <parquet.version>1.8.0</parquet.version>
+    <sqoop.version>1.4.7</sqoop.version>
+    <pig.version>0.16.0</pig.version>
     <dependency.pig.classifier>h2</dependency.pig.classifier>
-    <org.apache.oozie.version>4.2.0.2.6.0.3-8</org.apache.oozie.version>
-    <org.apache.hive.version>1.2.1000.2.6.0.3-8</org.apache.hive.version>
-    <org.apache.hbase.version>1.4.8</org.apache.hbase.version>
+    <org.apache.oozie.version>4.2.0</org.apache.oozie.version>
+    <org.apache.hive.version>1.2.1</org.apache.hive.version>
+    <org.apache.hbase.version>1.2.6</org.apache.hbase.version>
     <shim-bundle-plugin.version>0.1.0.0</shim-bundle-plugin.version>
     <htrace-core.version>3.1.0-incubating</htrace-core.version>
-    <zookeeper.version>3.4.6.2.6.0.3-8</zookeeper.version>
+    <zookeeper.version>3.4.6</zookeeper.version>
     <maven-bundle-plugin.version>3.5.1</maven-bundle-plugin.version>
     <org.apache.hbase.thirdparty.version>2.1.0</org.apache.hbase.thirdparty.version>
   </properties>

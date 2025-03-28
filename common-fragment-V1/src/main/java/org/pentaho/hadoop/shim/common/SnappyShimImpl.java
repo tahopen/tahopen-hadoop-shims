@@ -35,7 +35,11 @@ public class SnappyShimImpl extends CommonSnappyShim {
     ClassLoader cl = Thread.currentThread().getContextClassLoader();
     Thread.currentThread().setContextClassLoader( getClass().getClassLoader() );
     try {
-      return SnappyCodec.isNativeCodeLoaded();
+        // error depends hdp26 version not in repo!!!	
+      //return SnappyCodec.isNativeCodeLoaded();
+      return false;
+      //           // error depends hdp26 version not in repo!!!
+
     } catch ( Throwable t ) {
       return false;
     } finally {

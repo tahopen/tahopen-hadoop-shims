@@ -66,8 +66,10 @@ public class PentahoOrcOutputFormat extends HadoopFormatBase implements IPentaho
 
     if ( namedCluster != null ) {
       // if named cluster is not defined, no need to add cluster resource configs
-      BiConsumer<InputStream, String> consumer = ( is, filename ) -> conf.addResource( is, filename );
-      ShimConfigsLoader.addConfigsAsResources( namedCluster, consumer );
+
+    	// error depends hdp26 version not in repo!!!
+      //BiConsumer<InputStream, String> consumer = ( is, filename ) -> conf.addResource( is, filename );
+      //ShimConfigsLoader.addConfigsAsResources( namedCluster, consumer );
     } else {
       conf.addResource( "hive-site.xml" );
     }

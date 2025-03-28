@@ -30,10 +30,10 @@
       <properties>
         <org.apache.avro.version>1.8.0</org.apache.avro.version>
         <org.apache.hbase.version>1.4.8</org.apache.hbase.version>
-        <org.apache.hadoop.version-hdp26>2.7.3</org.apache.hadoop.version-hdp26>
+        <org.apache.hadoop.version-hdp26>2.7.3.2.6.0.3-8</org.apache.hadoop.version-hdp26>
         <org.apache.hive.version>1.2.1</org.apache.hive.version>
         <org.apache.oozie.version>4.2.0</org.apache.oozie.version>
-        <parquet.version>1.8.1</parquet.version>
+        <parquet.version>1.8.3</parquet.version>
         <parquet.cloudera.version>1.5.0-cdh5.14.0</parquet.cloudera.version>
         <pig.version>0.16.0</pig.version>
         <sqoop.version>1.4.7</sqoop.version>
@@ -50,6 +50,21 @@
           <version>${big-data-plugin.version}</version>
           <scope>compile</scope>
         </dependency>
+        <dependency>
+          <groupId>org.apache.parquet</groupId>
+          <artifactId>parquet-hadoop-bundle</artifactId>
+          <version>${parquet.version}</version>
+          <scope>provided</scope>
+        </dependency>
+
+<dependency>
+    <groupId>jdk.tools</groupId>
+    <artifactId>jdk.tools</artifactId>
+    <version>1.6</version>
+    <scope>system</scope>
+    <systemPath>/opt/java/jdk1.8.0_301/lib/tools.jar</systemPath>
+</dependency>
+
         <dependency>
           <groupId>com.twitter</groupId>
           <artifactId>parquet-hadoop-bundle</artifactId>
@@ -107,8 +122,11 @@
         <dependency>
           <groupId>org.apache.hadoop</groupId>
           <artifactId>hadoop-common</artifactId>
-          <!--todo: ask if this is a good idea -->
+          <version>2.6.5</version>
+          
+          <!--
           <version>${org.apache.hadoop.version-hdp26}</version>
+          -->
           <scope>provided</scope>
         </dependency>
         <dependency>
@@ -225,13 +243,26 @@
   </dependencies>
   <build>
     <plugins>
+    
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-compiler-plugin</artifactId>
+            <version>3.8.1</version>
+            <configuration>
+                <source>1.8</source>
+                <target>1.8</target>
+            </configuration>
+        </plugin>
+    
+<!--    
       <plugin>
         <artifactId>maven-compiler-plugin</artifactId>
         <executions>
+-->        
           <!-- dependencies for IT compile get hosed by shim-bundle-plugin,
                I'm not sure why that happens, but as workaround disabling
                IT compile.  All tests are run as part of test phase. -->
-          <execution>
+<!--          <execution>
             <id>test-integration_compile</id>
             <phase>${test-integration_compile-phase}</phase>
             <configuration>
@@ -240,7 +271,7 @@
           </execution>
         </executions>
       </plugin>
-<!--      
+-->      
       <plugin>
         <groupId>org.tahopen</groupId>
         <artifactId>shim-bundle-plugin</artifactId>
@@ -258,7 +289,7 @@
           </execution>
         </executions>
       </plugin>
--->      
+
       <plugin>
         <groupId>org.apache.felix</groupId>
         <artifactId>maven-bundle-plugin</artifactId>
@@ -267,7 +298,7 @@
           <instructions>
             <Bundle-SymbolicName>${project.artifactId}</Bundle-SymbolicName>
             <Bundle-Version>${pentaho-osgi-bundles.version}</Bundle-Version>
-            <Fragment-Host>pentaho-hadoop-driver-V1</Fragment-Host>
+            <Fragment-Host>tahopen-hadoop-driver-V1</Fragment-Host>
             <Pentaho-Code-Version>${pentaho-code.version}</Pentaho-Code-Version>
             <Import-Package>
             </Import-Package>
@@ -277,6 +308,15 @@
           </instructions>
         </configuration>
       </plugin>
+          
     </plugins>
   </build>
+  
+  <repositories>
+    <repository>
+        <id>cloudera</id>
+        <url>https://repository.cloudera.com/artifactory/cloudera-repos/</url>
+    </repository>  
+  </repositories>
+      
 </project>

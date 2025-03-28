@@ -28,7 +28,6 @@ import org.pentaho.di.core.util.Assert;
 import org.junit.Test;
 import org.pentaho.hadoop.shim.api.format.ParquetSpec;
 
-
 import java.util.Arrays;
 
 @RunWith( Parameterized.class )
