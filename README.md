@@ -16,7 +16,9 @@ tahopen-hadoop-shims uses the maven framework.
 
 This is a maven project, and to build it use the following command
 
+
 ```
+$ export MAVEN_OPTS="-Xms512m -Xmx2g"
 $ mvn clean install
 ```
 Optionally you can specify -Drelease to trigger obfuscation and/or uglification (as needed)
