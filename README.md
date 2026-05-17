@@ -23,7 +23,7 @@ $ mvn clean install
 
 or
 
-mvn clean install -DskipDefault
+$ mvn clean install -DskipDefault
 ```
 Optionally you can specify -Drelease to trigger obfuscation and/or uglification (as needed)
 
