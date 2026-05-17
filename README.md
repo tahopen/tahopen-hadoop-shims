@@ -24,6 +24,10 @@ $ mvn clean install
 or
 
 $ mvn clean install -DskipDefault
+
+or
+
+$ mvn clean install -Dmaven.javadoc.skip=true -DskipTests
 ```
 Optionally you can specify -Drelease to trigger obfuscation and/or uglification (as needed)
 
