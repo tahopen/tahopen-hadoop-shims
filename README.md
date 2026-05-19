@@ -1,5 +1,5 @@
-# pentaho-hadoop-shims #
-Hadoop Configurations, also known and shims and the Pentaho Big Data Adaptive layer, are collections of Hadoop libraries required to communicate with a specific version of Hadoop (and related tools: Hive, HBase, Sqoop, Pig, etc.). They are designed to be easily configured.
+# tahopen-hadoop-shims #
+Hadoop Configurations, also known and shims and the Tahopen Big Data Adaptive layer, are collections of Hadoop libraries required to communicate with a specific version of Hadoop (and related tools: Hive, HBase, Sqoop, Pig, etc.). They are designed to be easily configured.
 
 How to build
 --------------
@@ -16,8 +16,18 @@ tahopen-hadoop-shims uses the maven framework.
 
 This is a maven project, and to build it use the following command
 
+
 ```
+$ export MAVEN_OPTS="-Xms512m -Xmx2g"
 $ mvn clean install
+
+or
+
+$ mvn clean install -DskipDefault
+
+or
+
+$ mvn clean install -Dmaven.javadoc.skip=true -DskipTests
 ```
 Optionally you can specify -Drelease to trigger obfuscation and/or uglification (as needed)
 
