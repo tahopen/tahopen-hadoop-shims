@@ -5,12 +5,12 @@
   <parent>
     <groupId>org.tahopen</groupId>
     <artifactId>tahopen-hadoop-shims</artifactId>
-    <version>0.1.0.0-SNAPSHOT</version>
+    <version>0.1.0.0</version>
   </parent>
 
   <groupId>org.tahopen.hadoop.shims</groupId>
   <artifactId>tahopen-hadoop-shims-common-dependencies-V1</artifactId>
-  <version>0.1.0.0-SNAPSHOT</version>
+  <version>0.1.0.0</version>
   <packaging>bundle</packaging>
 
   <properties>
@@ -27,17 +27,21 @@
     <dependency>
       <groupId>org.apache.hadoop</groupId>
       <artifactId>hadoop-mapreduce-client-core</artifactId>
-      <version>${org.apache.hadoop.version}</version>
+      <version>2.6.0</version>
+<!--      <version>${org.apache.hadoop.version}</version> -->
+
     </dependency>
     <dependency>
       <groupId>org.apache.hadoop</groupId>
       <artifactId>hadoop-yarn-api</artifactId>
-      <version>${org.apache.hadoop.version}</version>
+      <version>2.6.0</version>
+<!--      <version>${org.apache.hadoop.version}</version> -->
     </dependency>
     <dependency>
       <groupId>org.apache.hadoop</groupId>
       <artifactId>hadoop-common</artifactId>
-      <version>${org.apache.hadoop.version}</version>
+      <version>2.6.0</version>
+<!--      <version>${org.apache.hadoop.version}</version> -->
     </dependency>
     <dependency>
       <groupId>org.tahopen</groupId>
@@ -96,7 +100,8 @@
     <dependency>
       <groupId>org.apache.hadoop</groupId>
       <artifactId>hadoop-hdfs</artifactId>
-      <version>${org.apache.hadoop.version}</version>
+      <version>2.6.0</version>
+<!--      <version>${org.apache.hadoop.version}</version> -->
     </dependency>
     <dependency>
       <groupId>org.apache.hbase</groupId>

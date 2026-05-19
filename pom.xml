@@ -6,7 +6,7 @@
   <parent>
     <groupId>org.tahopen</groupId>
     <artifactId>tahopen-ce-jar-parent-pom</artifactId>
-    <version>0.1.0.0</version>
+    <version>0.2.0.0</version>
   </parent>
 
   <artifactId>tahopen-hadoop-shims</artifactId>
@@ -30,10 +30,12 @@
     <big-data-plugin.version>0.1.0.0</big-data-plugin.version>
     <org.apache.orc.version>1.2.3</org.apache.orc.version>
     <org.apache.parquet.version>1.14.1</org.apache.parquet.version>
-    <twitter.parquet.version>1.5.0-cdh5.13.0</twitter.parquet.version>
+    <twitter.parquet.version>1.5.0</twitter.parquet.version>
+    <!-- <twitter.parquet.version>1.5.0-cdh5.13.0</twitter.parquet.version> -->
     <jets3t.version>0.9.4</jets3t.version>
     <!-- Added for fragment prototype -->
-    <org.apache.hadoop.version>2.6.0-cdh5.13.0</org.apache.hadoop.version>
+  <!--  <org.apache.hadoop.version>2.6.0-cdh5.13.0</org.apache.hadoop.version> -->
+    <org.apache.hadoop.version>2.6.0</org.apache.hadoop.version>
     <org.apache.avro.version>1.8.0</org.apache.avro.version>
     <parquet.version>1.8.0</parquet.version>
     <sqoop.version>1.4.7</sqoop.version>
@@ -139,14 +141,14 @@
           </exclusion>
         </exclusions>
       </dependency>
-      <dependency>
+<!--      <dependency>
         <groupId>pentaho</groupId>
         <artifactId>oss-licenses</artifactId>
         <version>${oss-licenses.version}</version>
         <type>zip</type>
         <optional>true</optional>
       </dependency>
-      <dependency>
+-->      <dependency>
         <groupId>org.hamcrest</groupId>
         <artifactId>hamcrest-core</artifactId>
         <version>${org.hamcrest.version}</version>

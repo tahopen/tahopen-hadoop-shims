@@ -5,12 +5,12 @@
   <parent>
     <groupId>org.tahopen</groupId>
     <artifactId>tahopen-hadoop-shims</artifactId>
-    <version>0.1.0.0-SNAPSHOT</version>
+    <version>0.1.0.0</version>
   </parent>
 
   <groupId>org.tahopen.hadoop.shims</groupId>
   <artifactId>tahopen-hadoop-shims-common-fragment-V1</artifactId>
-  <version>0.1.0.0-SNAPSHOT</version>
+  <version>0.1.0.0</version>
   <packaging>bundle</packaging>
 
   <properties>
@@ -311,12 +311,13 @@
           
     </plugins>
   </build>
-  
+ 
+<!-- 
   <repositories>
     <repository>
         <id>cloudera</id>
         <url>https://repository.cloudera.com/artifactory/cloudera-repos/</url>
     </repository>  
   </repositories>
-      
+-->      
 </project>

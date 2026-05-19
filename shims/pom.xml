@@ -5,12 +5,12 @@
 <parent>
   <groupId>org.tahopen</groupId>
   <artifactId>tahopen-hadoop-shims</artifactId>
-  <version>0.1.0.0-SNAPSHOT</version>
+  <version>0.1.0.0</version>
 </parent>
 
 <groupId>org.tahopen.hadoop.shims</groupId>
 <artifactId>tahopen-hadoop-shims-list</artifactId>
-<version>0.1.0.0-SNAPSHOT</version>
+<version>0.1.0.0</version>
 <packaging>pom</packaging>
 
 <properties>
@@ -62,8 +62,8 @@
 <dependencyManagement>
   <dependencies>
     <dependency>
-      <groupId>pentaho</groupId>
-      <artifactId>pentaho-hdfs-vfs</artifactId>
+      <groupId>org.tahopen</groupId>
+      <artifactId>tahopen-hdfs-vfs</artifactId>
       <version>${pentaho-hdfs-vfs.version}</version>
       <scope>compile</scope>
       <exclusions>
@@ -133,8 +133,8 @@
             <configuration>
               <artifactItems>
                 <artifactItem>
-                  <groupId>org.pentaho.hadoop.shims</groupId>
-                  <artifactId>pentaho-hadoop-shims-common-fragment-V1</artifactId>
+                  <groupId>org.tahopen.hadoop.shims</groupId>
+                  <artifactId>tahopen-hadoop-shims-common-fragment-V1</artifactId>
                   <classifier>sources</classifier>
                   <overWrite>false</overWrite>
                   <outputDirectory>${project.build.directory}/src</outputDirectory>
@@ -259,13 +259,14 @@
       </property>
     </activation>
     <modules>
-      <module>cdh61</module>
+<!--      <module>cdh61</module>
       <module>hdp30</module>
+
       <module>emr521</module>
       <module>dataproc1421</module>
-      <module>cdpdc71</module>
+      <module>cdpdc71</module> -->
       <module>apache</module>
-      <module>hdi40</module>
+<!--      <module>hdi40</module> -->
     </modules>
   </profile>
 
