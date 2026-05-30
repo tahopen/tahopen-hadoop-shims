@@ -14,7 +14,7 @@
 
   <properties>
     <vendor-driver.version>3.0.0.0.hdp</vendor-driver.version>
-    <pentaho-code.version>11.0.0.0</pentaho-code.version>
+    <pentaho-code.version>1.0.0.0</pentaho-code.version>
 
     <shim.name>hdp30</shim.name>
     <!-- default folder -->
@@ -25,24 +25,40 @@
     <dependency.pig.classifier>h2</dependency.pig.classifier>
     <org.apache.oozie.version>4.3.1</org.apache.oozie.version>
     <sqoop.version>1.4.7</sqoop.version>
-    <hive-jdbc.version>3.1.0.3.0.0.0-1634</hive-jdbc.version>
+
+    <!--<hive-jdbc.version>3.1.0.3.0.0.0-1634</hive-jdbc.version>-->
+    <hive-jdbc.version>3.1.0</hive-jdbc.version>
+
+
     <org.apache.avro.version>1.8.0</org.apache.avro.version>
     <hadoop-aws.version>2.7.3</hadoop-aws.version>
     <!-- client and default folders -->
     <hadoop.version>3.1.0.3.0.0.0-1634</hadoop.version>
+
     <!-- pmr folder -->
-    <org.apache.hbase.version>2.0.0.3.0.0.0-1634</org.apache.hbase.version>
+
+    <!--<org.apache.hbase.version>2.0.0.3.0.0.0-1634</org.apache.hbase.version>-->
+    <org.apache.hbase.version>2.0.0</org.apache.hbase.version>
+
     <org.apache.hbase-prefix-tree.version>2.0.0-alpha4</org.apache.hbase-prefix-tree.version>
-    <zookeeper.version>3.4.6.3.0.0.0-1634</zookeeper.version>
+
+    <!-- <zookeeper.version>3.4.6.3.0.0.0-1634</zookeeper.version> -->
+    <zookeeper.version>3.4.6</zookeeper.version>
+
     <htrace-core.version>2.04</htrace-core.version>
     <protobuf-java.version>2.5.0</protobuf-java.version>
     <commons-configuration.version>1.6</commons-configuration.version>
     <commons-configuration2.version>2.1.1</commons-configuration2.version>
     <geronimo-servlet_3.0_spec.version>1.0</geronimo-servlet_3.0_spec.version>
-    <org.apache.hive.version>3.1.0.3.0.0.0-1634</org.apache.hive.version>
+    <!--<org.apache.hive.version>3.1.0.3.0.0.0-1634</org.apache.hive.version>-->
+    <org.apache.hive.version>3.1.0</org.apache.hive.version>
+
     <org.apache.hadoop.version>3.1.0.3.0.0.0-1634</org.apache.hadoop.version>
     <org.apache.orc.version>1.5.1.3.0.0.0-1634</org.apache.orc.version>
-    <parquet.version>1.10.0.3.0.0.0-1634</parquet.version>
+
+    <!-- <parquet.version>1.10.0.3.0.0.0-1634</parquet.version>-->
+    <parquet.version>1.10.0</parquet.version>
+
     <org.antlr.version>3.5.2</org.antlr.version>
     <joda-time.version>2.9.9</joda-time.version>
 

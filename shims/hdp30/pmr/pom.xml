@@ -13,7 +13,8 @@
   <packaging>pom</packaging>
 
   <properties>
-    <org.apache.hbase.version>2.0.0.3.0.0.0-1634</org.apache.hbase.version>
+    <!--<org.apache.hbase.version>2.0.0.3.0.0.0-1634</org.apache.hbase.version>-->
+    <org.apache.hbase.version>2.0.0</org.apache.hbase.version>
   </properties>
 
   <dependencies>
