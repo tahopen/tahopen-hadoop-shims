@@ -5,29 +5,48 @@
   <parent>
     <groupId>org.tahopen.hadoop.shims</groupId>
     <artifactId>tahopen-hadoop-shims-cdh514-reactor</artifactId>
-    <version>0.1.0.0-SNAPSHOT</version>
+    <version>0.1.0.0</version>
   </parent>
 
   <artifactId>tahopen-hadoop-shims-cdh514-driver</artifactId>
-  <version>0.1.0.0-SNAPSHOT</version>
+  <version>0.1.0.0</version>
   <packaging>bundle</packaging>
 
   <properties>
     <commons-lang.version>2.6</commons-lang.version>
-    <pentaho-osgi-bundles.version>0.1.0.0-SNAPSHOT</pentaho-osgi-bundles.version>
+    <pentaho-osgi-bundles.version>0.1.0.0</pentaho-osgi-bundles.version>
     <org.apache.avro.version>1.8.0</org.apache.avro.version>
     <org.apache.orc.version>1.2.3</org.apache.orc.version>
-    <org.apache.hadoop.version>2.6.0-cdh5.14.0</org.apache.hadoop.version>
-    <org.apache.hbase.version>1.2.0-cdh5.14.0</org.apache.hbase.version>
+
+    <org.apache.hadoop.version>2.6.0</org.apache.hadoop.version>
+    <!--<org.apache.hadoop.version>2.6.0-cdh5.14.0</org.apache.hadoop.version>-->
+
+    <!-- <org.apache.hbase.version>1.2.0-cdh5.14.0</org.apache.hbase.version>-->
+    <org.apache.hbase.version>1.2.0</org.apache.hbase.version>
+
     <org.apache.hive.version>1.1.0-cdh5.14.0</org.apache.hive.version>
-    <org.apache.oozie.version>4.1.0-cdh5.14.0</org.apache.oozie.version>
+    <org.apache.hive.version>1.1.0</org.apache.hive.version>
+
+    <!-- <org.apache.oozie.version>4.1.0-cdh5.14.0</org.apache.oozie.version>-->
+    <org.apache.oozie.version>4.1.0</org.apache.oozie.version>
+
+
     <parquet.version>1.8.1</parquet.version>
-    <parquet.cloudera.version>1.5.0-cdh5.14.0</parquet.cloudera.version>
-    <pig.version>0.12.0-cdh5.14.0</pig.version>
-    <sqoop.version>1.4.6-cdh5.14.0</sqoop.version>
-    <zookeeper.version>3.4.5-cdh5.14.0</zookeeper.version>
+
+   <!-- <parquet.cloudera.version>1.5.0-cdh5.14.0</parquet.cloudera.version> -->
+    <parquet.cloudera.version>1.5.0</parquet.cloudera.version>
+
+    <!-- <pig.version>0.12.0-cdh5.14.0</pig.version>-->
+    <pig.version>0.12.0</pig.version>
+
+    <!--<sqoop.version>1.4.6-cdh5.14.0</sqoop.version>-->
+    <sqoop.version>1.4.7</sqoop.version>
+
+    <!-- <zookeeper.version>3.4.5-cdh5.14.0</zookeeper.version> -->
+    <zookeeper.version>3.4.5</zookeeper.version>
+
     <vendor-driver.version>5.14.0.0.cdh</vendor-driver.version>
-    <pentaho-code.version>11.0.0.0</pentaho-code.version>
+    <pentaho-code.version>1.0.0.0</pentaho-code.version>
     <joda-time.version>2.9.9</joda-time.version>
     <jline.version>0.9.94</jline.version>
   </properties>
@@ -87,6 +106,7 @@
       <groupId>org.apache.sqoop</groupId>
       <artifactId>sqoop</artifactId>
       <version>${sqoop.version}</version>
+
     </dependency>
     <dependency>
       <groupId>org.apache.hadoop</groupId>

@@ -259,14 +259,13 @@
       </property>
     </activation>
     <modules>
-<!--      <module>cdh61</module>
+      <module>cdh61</module>
       <module>hdp30</module>
-
       <module>emr521</module>
       <module>dataproc1421</module>
-      <module>cdpdc71</module> -->
-      <module>apache</module>
-<!--      <module>hdi40</module> -->
+      <module>cdpdc71</module>
+      <module>apache</module> 
+     <module>hdi40</module>
     </modules>
   </profile>
 
@@ -362,7 +361,6 @@
       <module>hdi40</module>
     </modules>
   </profile>
-
 
 </profiles>
 </project>
